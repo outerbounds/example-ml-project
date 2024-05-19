@@ -4,13 +4,12 @@ class GitHubActionsDemo(FlowSpec):
 
     @step
     def start(self):
-        self.x = 123
-        print("Hello world!")
+        print("Hello GitHub Actions!")
         self.next(self.end)
 
     @step
     def end(self):
-        print(self.x)
+        print('fixed')
 
 if __name__ == "__main__":
     GitHubActionsDemo()
