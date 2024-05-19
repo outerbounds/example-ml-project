@@ -29,4 +29,4 @@ jobs:
 
       - name: Run helloworld flow
         run: |-
-          python helloworld.py run --with kubernetes
+          python hello.py run --with kubernetes
