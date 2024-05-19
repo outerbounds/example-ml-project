@@ -1,0 +1,32 @@
+name: Run HelloWorld Flow
+on:
+  push:
+
+jobs:
+  helloworld:
+    permissions:
+      id-token: write
+      contents: read
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.11
+
+      - name: Install and Configure Outerbounds
+        run: |-
+          pip install -U outerbounds && \
+          outerbounds service-principal-configure \
+          --name github-actions-demo \
+          --deployment-domain dev-content.outerbounds.xyz \
+          --perimeter default \
+          --github-actions
+
+      - name: Run helloworld flow
+        run: |-
+          python helloworld.py run --with kubernetes
