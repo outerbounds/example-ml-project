@@ -27,10 +27,10 @@ jobs:
           --perimeter default \
           --github-actions
 
-      - name: Run helloworld flow
+      - name: Run tests
         run: |-
           python hello.py run --with kubernetes
 
       - name: Deploy to production
         run: |-
-          python hello.py argo-workflows create
+          python hello.py --branch ${{ github.head_ref || github.ref_name }} argo-workflows create

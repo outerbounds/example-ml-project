@@ -1,5 +1,6 @@
-from metaflow import FlowSpec, step, card, schedule
+from metaflow import FlowSpec, step, card, project
 
+@project(name='mlproject')
 class GitHubActionsDemo(FlowSpec):
 
     @step
