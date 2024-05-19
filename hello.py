@@ -1,6 +1,6 @@
 from metaflow import FlowSpec, step, card, schedule
 
-class HelloFlow(FlowSpec):
+class GitHubActionsDemo(FlowSpec):
 
     @step
     def start(self):
@@ -13,4 +13,4 @@ class HelloFlow(FlowSpec):
         print(self.x)
 
 if __name__ == "__main__":
-    HelloFlow()
+    GitHubActionsDemo()
