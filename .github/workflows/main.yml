@@ -30,3 +30,7 @@ jobs:
       - name: Run helloworld flow
         run: |-
           python hello.py run --with kubernetes
+
+      - name: Deploy to production
+        run: |-
+          python hello.py argo-workflows create
