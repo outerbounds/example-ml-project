@@ -13,7 +13,7 @@ class GitHubActionsDemo(FlowSpec):
 
     @step
     def end(self):
-        self.model_accuracy = 0.91
+        self.model_accuracy = 0.92
         print('fixed')
 
 if __name__ == "__main__":
