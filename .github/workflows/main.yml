@@ -27,7 +27,7 @@ jobs:
           --perimeter default \
           --github-actions
 
-      - name: Run tests
+      - name: Backtest model
         run: |-
           python hello.py run --with kubernetes
 
