@@ -1,7 +1,7 @@
 from metaflow import FlowSpec, step, card, project
 
 @project(name='mlproject')
-class GitHubActionsDemo2(FlowSpec):
+class GitHubActionsDemo3(FlowSpec):
 
     @step
     def start(self):
@@ -13,4 +13,4 @@ class GitHubActionsDemo2(FlowSpec):
         print('fixed')
 
 if __name__ == "__main__":
-    GitHubActionsDemo2()
+    GitHubActionsDemo3()
