@@ -5,7 +5,7 @@ class GitHubActionsDemo(FlowSpec):
 
     @step
     def start(self):
-        self.x = 'cucumber'
+        self.x = 'cucumber2'
         print('x is', self.x)
         print('branch is', current.branch_name)
         print("Hello GitHub Actions!")
