@@ -5,7 +5,7 @@ class GitHubActionsDemo3(FlowSpec):
 
     @step
     def start(self):
-        print("Hello GitHub Actions! Hello")
+        print("Hello GitHub Actions! Hello hello")
         self.next(self.end)
 
     @step
